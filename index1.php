@@ -7,6 +7,15 @@
 <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
 <link rel="stylesheet" type="text/css" href="/fonts/fonts.css" media="screen"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.2.6/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.2.6/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
 </head>
 <body style='margin: 0px;'>
     
