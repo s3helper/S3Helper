@@ -1,0 +1,24 @@
+@font-face {
+    font-family: SFProDM;
+    src: url("SFProDisplay-Medium.ttf");
+}
+@font-face {
+    font-family: SFProDR;
+    src: url("SFProDisplay-Regular.ttf");
+}
+@font-face {
+    font-family: SFProTM;
+    src: url("SFProDisplay-Medium.ttf");
+}
+@font-face {
+    font-family: SFProDSB;
+    src: url("SFProDisplay-SemiBold.ttf");
+}
+@font-face {
+    font-family: SFProDSB;
+    src: url("SFProDisplay-SemiBold.ttf");
+}
+@font-face {
+    font-family: SFProDL;
+    src: url("SFProDisplay-Light.ttf");
+}

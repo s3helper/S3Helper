@@ -1,0 +1,21 @@
+<xml>
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use XML::Twig;
+
+my $xml = XML::Twig -> new -> parsefile ( 'feed.xml' );
+$xml ->set_pretty_print('indented_a');
+
+open ( my $input, '<', 'https://csv1.netlify.com/feed.csv' ) or die $!;
+
+while ( <$input> ) {
+   chomp;
+   my ( $name, $ip ) = split /,/;
+   $xml -> root -> set_att('name', $name );
+   $xml -> get_xpath('//ipaddress',0) -> set_text($ip);
+
+   $xml -> print;
+}
+<xml>

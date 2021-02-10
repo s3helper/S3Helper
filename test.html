@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>readContactCSV.php</title>
+</head>
+<body>
+ <h1>Contacts</h1>
+ <div>
+ <?php
+  print <<< HERE
+  <table border = "1">
+  <tr>
+   <th>First</th>
+   <th>Last</th>
+   <th>email</th>
+   <th>phone</th>
+  </tr>
+HERE;
+  $data = file("feed.csv");
+  foreach ($data as $line){
+  $lineArray = explode("t", $line);
+  list($face-name, $lName, $email, $phone) = $lineArray;
+  print <<< HERE
+   <tr>
+   <td>$face-name</td>
+   <td>$lName</td>
+   <td>$email</td>
+   <td>$phone</td>
+   </tr>
+HERE;
+  } // end foreach
+  //print the bottom of the table
+  print "</table> n";
+ ?>
+ </div>
+</body>
+</html>

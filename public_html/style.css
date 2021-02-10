@@ -1,0 +1,293 @@
+body, html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.image {
+    opacity: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: -300px;
+    z-index: 0;
+    position: relative;
+    background-image: url("lazy-load.png");
+}
+.image:load {
+    -webkit-transition: 0.25s all ease-in;
+    transition: 0.25s all ease-in;
+    opacity: 1;
+}
+
+.watch {
+    transition: all .3s ease;
+}
+
+.main-grid {
+    grid-column-gap: 50px;
+}
+
+.qr-code {
+    border-radius: 50px;
+    height: 52.23px;
+    width: 250px;
+    margin-left: 25px;
+    transition: all .3s ease;
+}
+
+.qr-code:hover {
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.qr-code.lazy.loaded, [data-lazy=true].loaded {
+    /* opacity: 1; */
+}
+
+.sub-heading {
+    margin-top: 10px;
+}
+
+.nav-bar {
+    border-radius: 10px;
+    position: fixed;
+    box-shadow: 0 3px 12px -1px rgba(7,10,25,.2), 0 22px 27px -20px rgba(7,10,25,.2);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: #00a3d4bd;
+        top: 1%;
+    left: 15%;
+    margin-left: -20px;
+    width: 70%;
+    z-index: 999;
+}
+}
+
+.logo {
+    padding: 5px;
+    margin: 0;
+}
+@media (prefers-color-scheme: dark) {
+.qr-code {
+    background-color: white;
+}
+.download-light {
+    display: none;
+}
+
+.download-dark {
+    display: block;
+}
+
+body {
+    background-color: black;
+}
+
+
+
+.title_div {
+    color: white;
+}
+
+.logo {
+    color: white;
+}
+
+.watch {
+    background-color: #151515;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.description {
+    color: white;
+    text-align: center;
+}
+
+.white-qr-icon {
+    display: none;
+}
+.qr-icon {
+    display: inline;
+}
+
+.qr-button {
+    color: black;
+}
+}
+@media (prefers-color-scheme: light) {
+.qr-code {
+    background-color: black;
+}
+
+.download-light {
+    display: block;
+}
+
+.download-dark {
+    display: none;
+}
+
+.watch {
+    background-color: #e0e0e0;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+.white-qr-icon {
+    display: inline;
+}
+.qr-icon {
+    display: none;
+}
+.qr-button {
+    color: white;
+}
+}
+
+
+
+.watch {
+    margin-top: 25px;
+    border-radius: 20px;
+}
+@media only screen and (min-width: 800px) {
+.main-grid {
+    grid-template-columns: 1fr 1fr;
+}
+.main-grid {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+}
+@media only screen and (min-width: 1150px) {
+.main-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media only screen and (min-width: 1750px) {
+.main-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+}
+
+@media only screen and (min-width: 600px) {
+
+}
+@media only screen and (min-width: 50px) {
+    .download-dark {
+    width: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.download-light {
+    width: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.back-color {
+    height: 300px;
+}
+
+.image {
+    max-width: 300px;
+    height: 300px;
+}
+
+.watch {
+    width: 300px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.highlight {
+     width: 150px;
+     min-width: 150px;
+     height: 300px;
+     max-height: 300px;
+     min-height: 300px;
+}
+
+.download {
+    width: 250px;
+}
+
+.title_div {
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+}
+
+/*qr-code*/
+@media only screen and (min-width: 850px) {
+    .qr-code {
+        display: block;
+    }
+    .download-light {
+        display: none;
+    }
+    .download-dark {
+        display: none;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .qr-code {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 0px) {
+    .nav-bar {
+    padding: 20px;
+    border-radius: 25px;
+    justify-content: center;
+    float: center;
+    }
+}
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100vw; /* Full width (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(157, 157, 158, 0.21) /* White background with opacity */
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay2 {
+  position: fixed; /* Sit on top of the page content */
+  width: 50vw; /* Full width (cover the whole page) */
+  height: 60vh; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(255,255,255,1); /* White background with opacity */
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 40px;
+}
+
+.qr-heading {
+    font-family: SFProDSB, sans-serif;
+    font-size: 15px;
+}
+
+.qr-button {
+    margin-bottom: 5px;
+    padding: 5px;
+    font-family: SFProDSB, sans-serif;
+}
